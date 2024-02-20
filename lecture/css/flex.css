@@ -1,4 +1,10 @@
 .container-1 {
     border: 5px solid navy;
     height: 500px;
+    /* Flex properties for parent (aka container) element */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
 }
