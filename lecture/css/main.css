@@ -88,23 +88,50 @@ aside ~ h3 {
 /* Pseudo-class Selector - Select elements based on a certain state */
 /* selector:pseudo-class{} */
 
+.selectors > a {
+    border: 2px solid darkblue;
+}
+
 /* unvisited link */
+.selectors > a:link {
+    color: red;
+}
 
 /* visited link */
+.selectors > a:visited {
+    color: green;
+}
 
 /* mouse over link */
+.selectors > a:hover {
+    color: white;
+    background-color: black;
+    font-size: 24px;
+}
 
 /* selected link */
-
-
+.selectors > a:active {
+    background-color: blueviolet;
+}
 
 
 /* Pseudo Elements - used to style specified parts of an element */
 /* selector::psuedo-element{} */
 
+/* nth- child */
+.child-example > p:nth-child(1) {
+    color: red;
+    background-color: yellow;
+}
 
+#first-line::first-line {
+    color: blue;
+    font-variant: small-caps;
+}
 
-
+#before-after::before {
+    content: url('https://picsum.photos/300/100');
+}
 /* Attribute Selectors - style HTML elements that have specific attributes or attribute values */
 /* selector[attribute]{} */
 
@@ -113,28 +140,42 @@ aside ~ h3 {
 
 /* CSS [attribute="value"] Selector */
 /* matches the value exactly */
-
+div[title="border"] {
+    border: 2px solid black;
+    background-color: crimson;
+}
 
 /* CSS [attribute~="value"] Selector */
 /* matches the value containing a specified word */
 
+div[title~="border"] {
+    font-variant: small-caps;
+}
 
 /* CSS [attribute|="value"] Selector */
 /* matches a value or a value followed by a hyphen */
-
+div[title|="border"] {
+    color: white;
+}
 
 /* CSS [attribute^="value"] Selector */
 /* matches if the value starts with the specified value */
 
-
+div[title^="border"] {
+    background-color: blue ;
+}
 /* CSS [attribute$="value"] Selector */
 /* matches if the value ends with the specified value */
 
-
+div[title$="border"] {
+    background-color: greenyellow;
+}
 /* CSS [attribute*="value"] Selector */
 /* matches contains the specified value */
 
-
+div[title*="s"] {
+    text-align: right;
+}
 
 /* CSS DISPLAYS */
 
