@@ -120,6 +120,7 @@
             <img src="https://picsum.photos/200?random=14" alt="">
         </div>
     </section>
+    <button id="test-display">Click Me</button>
 
     <section class="positions">
         <h1>CSS Positions</h1>
@@ -130,6 +131,13 @@
             <img src="https://picsum.photos/200?random=22" alt="" id="img-3">
         </div>
     </section>
+    <script>
+        let button = document.getElementById('test-display');
+        button.addEventListener('click', () => {
+            let middlePhoto = document.getElementById('middle')
+            middlePhoto.style.display = middlePhoto.style.display === 'none' ? 'inline' : 'none'
+        })
+    </script>
     
 
 </body>
